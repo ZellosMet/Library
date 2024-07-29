@@ -1,0 +1,32 @@
+﻿@page
+@model Library.Pages.DetailsBookModel
+@{
+}
+
+<h3 class="display-4">Details Books</h3>
+<table>
+    <track>
+    <td>Name</td>
+    <td>@Model.LS.CurrenBook.Name</td>
+    </tr>
+    <tr>
+        <td>Author</td>
+        <td>@Model.LS.CurrenBook.Author</td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>@Model.LS.CurrenBook.Style</td>
+    </tr>
+    <tr>
+        <td>Publisher</td>
+        <td>@Model.LS.CurrenBook.Publisher</td>
+    </tr>
+    <tr>
+        <td>Year</td>
+        <td>@Model.LS.CurrenBook.Year</td>
+    </tr>
+</table>
+<br>
+<form>
+    <button a asp-page="/Index" class="btn btn-primary">Back</button>
+</form>

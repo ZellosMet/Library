@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Library</h1>
+</div>
+<h3 class="display-4">Books</h3>
+
+<form asp-page-handler="SearchBook" method="post">
+    <div class="form-group">
+        <input class="text" name="search" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<form asp-page-handler="ResetSearch" method="post">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Reset</button>
+    </div>
+</form>
+
+<div>
+    <form>
+        <button a asp-page="/AddBook" class="btn btn-primary">Add Book</button>
+    </form>
+<br>
+
+<table>
+    @foreach (var book in Model.LS.SearchList)
+    {  
+    <tr>
+        <td> <h4>@book.Key</h4> </td>
+        <td>
+            <form method="post">
+               <a asp-page="/DetailsBook" asp-route-name="@book.Key" class="btn btn-primary">Details</a>
+            </form>
+        </td>
+        <td>     
+            <form method="post">
+               <a asp-page="/EditBook" asp-route-name="@book.Key" class="btn btn-primary">Edit</a>
+            </form>
+        </td>
+        <td>
+            <form asp-page-handler="DeleteBook" method="post" asp-route-name="@book.Key" onsubmit="return confirm('Delete?');">
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </form>
+        </td>
+    </tr>
+    }
+</table>
+</div>

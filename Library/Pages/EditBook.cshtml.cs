@@ -1,4 +1,4 @@
-using Library.Models;
+п»їusing Library.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,13 +11,13 @@ namespace Library.Pages
         {
             LS = lS;
         }
-        //Метод для получения выбранной книги
+        //РњРµС‚РѕРґ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РІС‹Р±СЂР°РЅРЅРѕР№ РєРЅРёРіРё
         public IActionResult OnGet(string name)
         {
             LS.CurrenBook = LS.BookList[name];
             return Page();
         }
-        //Метод для изменения книги
+        //РњРµС‚РѕРґ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РєРЅРёРіРё
         public IActionResult OnPostEditBook(string name, string author, string style, string publisher, string year)
         { 
             LS.RemoveBook(LS.CurrenBook.Name);

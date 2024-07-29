@@ -1,4 +1,4 @@
-using Library.Models;
+п»їusing Library.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -12,7 +12,7 @@ namespace Library.Pages
             LS = ls;
         }
         public void OnGet(){}
-        //Метод для создании книги
+        //РњРµС‚РѕРґ РґР»СЏ СЃРѕР·РґР°РЅРёРё РєРЅРёРіРё
         public void OnPostAddBook(string name, string author, string style, string publisher, string year)
         {
             LS.AddBook(name, author, style, publisher, year);

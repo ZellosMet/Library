@@ -1,4 +1,4 @@
-using Library.Models;
+п»їusing Library.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,7 +11,7 @@ namespace Library.Pages
         {
             LS = lS;
         }       
-        //Метод получения выбранной книги
+        //РњРµС‚РѕРґ РїРѕР»СѓС‡РµРЅРёСЏ РІС‹Р±СЂР°РЅРЅРѕР№ РєРЅРёРіРё
         public IActionResult OnGet(string name)
         {
             LS.CurrenBook = LS.BookList[name];

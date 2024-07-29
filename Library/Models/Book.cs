@@ -1,5 +1,6 @@
 ﻿namespace Library.Models
 {
+    //Класс книги
     public class Book
     {
         string _name;
@@ -7,7 +8,6 @@
         string _style;
         string _publisher;
         string _year;
-
         public string Name { get { return _name; } set { _name = value; } }
         public string Author { get { return _author; } set { _author = value; } }
         public string Style { get { return _style; } set { _style = value; } }

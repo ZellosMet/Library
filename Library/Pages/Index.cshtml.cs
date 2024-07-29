@@ -13,15 +13,19 @@ namespace Library.Pages
         }   
 
         public void OnGet(){}
+        //Метод удаление книги из списка
         public IActionResult OnPostDeleteBook(string name)
         {
             LS.RemoveBook(name);
             return Page();
         }
+        //Метод редактирования книги
         public void OnPostEditBook(string name)
         {
+            //Запоминаем выбранную книгу
             LS.CurrenBook = LS.BookList[name];   
         }
+        //Метод фильтрации книги по всем параметрам
         public IActionResult OnPostSearchBook(string search)
         {
             LS.SearchList.Clear();
@@ -40,6 +44,7 @@ namespace Library.Pages
             }
             return Page();
         }
+        //Метод обнуления фильтрации
         public IActionResult OnPostResetSearch()
         {
             LS.SearchList.Clear();

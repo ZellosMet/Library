@@ -2,7 +2,7 @@
 @model Library.Pages.EditBookModel
 @{
 }
-
+@*Форма для редактирования книги с заполненными данными об выбранной книги*@
 <h3 class="display-4">Edit Books</h3>
 <div class="list-group-item d-flex justify-content-between">
     <form asp-page-handler="EditBook" method="post">
@@ -30,6 +30,7 @@
     </form>
 </div>
 <br>
+@*Кнопка возврата на основную страницу*@
 <form>
     <button a asp-page="/Index" class="btn btn-primary">Back</button>
 </form>

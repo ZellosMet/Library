@@ -11,12 +11,13 @@ namespace Library.Pages
         {
             LS = lS;
         }
-
+        //Метод для получения выбранной книги
         public IActionResult OnGet(string name)
         {
             LS.CurrenBook = LS.BookList[name];
             return Page();
         }
+        //Метод для изменения книги
         public IActionResult OnPostEditBook(string name, string author, string style, string publisher, string year)
         { 
             LS.RemoveBook(LS.CurrenBook.Name);

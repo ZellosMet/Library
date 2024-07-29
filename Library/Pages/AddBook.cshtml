@@ -2,7 +2,7 @@
 @model Library.Pages.AddBookModel
 @{
 }
-
+@*Форма получения данных от пользователя для создании книги*@
 <h3 class="display-4">Add Books</h3>
 <div class="list-group-item d-flex justify-content-between">
     <form asp-page-handler="AddBook" method="post">
@@ -30,6 +30,7 @@
     </form>
 </div>
 <br>
+@*Кнопка для возврата на оснавную форму*@
 <form>
     <button a asp-page="/Index" class="btn btn-primary">Back</button>
 </form>

@@ -11,6 +11,7 @@ namespace Library.Pages
         {
             LS = lS;
         }       
+        //Метод получения выбранной книги
         public IActionResult OnGet(string name)
         {
             LS.CurrenBook = LS.BookList[name];

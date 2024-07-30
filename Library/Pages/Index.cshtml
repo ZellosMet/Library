@@ -11,13 +11,9 @@
 @*Форма поиска*@
 <form asp-page-handler="SearchBook" method="post">
     <div class="form-group">
+        @Html.DropDownList("select", new SelectList(new string[] {"Name", "Author", "Style", "Publisher", "Year"}), "All")
         <input class="text" name="search" />
         <button type="submit" class="btn btn-primary">Search</button>
-    </div>
-</form>
-<form asp-page-handler="ResetSearch" method="post">
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Reset</button>
     </div>
 </form>
 @*Кнопка перехода на форму добавления книги*@
